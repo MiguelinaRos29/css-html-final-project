@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contact – DevCamp’s Fantastic Fries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <div class="logo__brand">DevCamp’s</div>
+      <div class="logo__tiny">FANTASTIC</div>
+      <div class="logo__main">FrYes</div>
+    </div>
+    <nav class="nav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="menu.html" class="nav__link">Menu</a>
+      <a href="contact.html" class="nav__link active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container contact">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Send us a message or visit our location.</p>
+
+    <div class="contact-grid">
+      <form class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message"></textarea>
+
+        <button type="submit" class="btn btn--yellow">Send</button>
+      </form>
+
+      <div class="contact-info">
+        <h2>Our Location</h2>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Any Street, Scottsdale, AZ</p>
+        <p><i class="fa-solid fa-phone"></i> 555 555 5555</p>
+        <p><i class="fa-solid fa-clock"></i> 10 AM - MIDNIGHT</p>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.839818019897!2d-111.9260489!3d33.4941701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b72e64ab23cbf%3A0x8b6d1a65a856b1ee!2sScottsdale%2C%20AZ!5e0!3m2!1sen!2sus!4v1669320136420"
+          allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 FrYes | All rights reserved</small>
+  </footer>
+</body>
+</html>
