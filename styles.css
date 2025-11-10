@@ -48,10 +48,11 @@ body {
   margin: 0 auto;
   flex: 0 0 auto;            /* si el header usa flex, evita que se estire */
 }
-.logo__arc{
-  width: 160px;              /* el SVG sigue el ancho del bloque */
-  height: 95px;              /* alto del arco */
+.logo-arc {
+  width: clamp(220px, 28vw, 360px); /* escala fluida: min, preferida, max */
+  height: auto;
   display: block;
+  margin-inline: auto;
 }
 .logo__arc text{
   font-size: 12px;           /* tamaño de las letras del arco */
@@ -121,18 +122,14 @@ body {
   background-image:
     linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
     url("./images/image-bg.jpg");
-  background-position: center, center;
-  background-size: cover, cover;
-  background-repeat: no-repeat, no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   /* Un valor por capa: primero gradiente (scroll), luego imagen (fixed) */
-  background-attachment: scroll, fixed;
+  background-attachment: fixed;
+
 }
-
-
-  
-
-
 
 .hero::after {
   content: "";
@@ -467,3 +464,16 @@ main p { margin-top: 6px; }
   }
 }
 
+/* --- aseguro que el header siempre se pueda clickear --- */
+.site-header {
+  position: relative;
+  z-index: 1000;
+}
+.hero {
+  position: relative;
+  z-index: 1;
+}
+.hero::before,
+.hero::after {
+  pointer-events: none; /* por si hay gradientes superpuestos */
+}
