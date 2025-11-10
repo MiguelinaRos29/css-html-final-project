@@ -112,17 +112,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text);
-
-  /* Dos capas: 1) el overlay (scroll)  2) la foto (fixed) */
   background-image:
     linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
     url("./images/image-bg.jpg");
   background-position: center, center;
+  background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto, cover;
-  background-attachment: scroll, fixed;   /* <- CLAVE */
+
+  /* Un valor por capa: primero gradiente (scroll), luego imagen (fixed) */
+  background-attachment: scroll, fixed;
 }
+
 
   
 
