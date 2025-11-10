@@ -81,7 +81,7 @@ body {
 @media (min-width: 1024px){
   .logo{ width: 220px; }
   .logo__arc{ width: 220px; height: 125px; }
-  .logo__arc text{ font-size: 15px; }
+  .logo__arc text{ font-size: 25px; }
   .logo__tiny{ font-size: .74rem; }
   .logo__main{ font-size: 2rem; }
 }
