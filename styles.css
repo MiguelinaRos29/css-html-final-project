@@ -68,6 +68,12 @@ body {
   letter-spacing: .06em;
 }
 
+.logo_brand{
+  font-size: clamp(20px, 3.2vw, 34px);
+  letter-spacing: .06em;
+  display: inline-block;
+}
+
 /* Tablet */
 @media (min-width: 768px){
   .logo{ width: 190px; }
