@@ -41,27 +41,51 @@ body {
   padding: 18px 12px;
 }
 
+/* ============== TAMAÑO DEL LOGO CURVO ============== */
+/* Tamaño base (móvil) */
 .logo{
-  text-align: center;
-  color: #fff;
+  width: 160px;              /* controla TODO el conjunto */
+  margin: 0 auto;
+  flex: 0 0 auto;            /* si el header usa flex, evita que se estire */
 }
 .logo__arc{
-  width: 180px;
-  height: 110px;
+  width: 160px;              /* el SVG sigue el ancho del bloque */
+  height: 95px;              /* alto del arco */
   display: block;
-  margin: 0 auto -6px; /* solapa un poco con el resto del logo */
 }
-.logo__tiny{
-  font-size: .7rem;
-  letter-spacing: .2em;
-  opacity: .8;
+.logo__arc text{
+  font-size: 12px;           /* tamaño de las letras del arco */
+  letter-spacing: 1.6px;
+}
+.logo__tiny{                 /* “FANTASTIC” */
+  font-size: .60rem;
+  letter-spacing: .18em;
   margin-top: -6px;
 }
-.logo__main{
-  font-size: 2rem;
+.logo__main{                 /* “FrYes” */
+  font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: .06em;
 }
+
+/* Tablet */
+@media (min-width: 768px){
+  .logo{ width: 190px; }
+  .logo__arc{ width: 190px; height: 110px; }
+  .logo__arc text{ font-size: 13.5px; }
+  .logo__tiny{ font-size: .68rem; }
+  .logo__main{ font-size: 1.75rem; }
+}
+
+/* Desktop */
+@media (min-width: 1024px){
+  .logo{ width: 220px; }
+  .logo__arc{ width: 220px; height: 125px; }
+  .logo__arc text{ font-size: 15px; }
+  .logo__tiny{ font-size: .74rem; }
+  .logo__main{ font-size: 2rem; }
+}
+
 
 .nav {
   display: flex;
